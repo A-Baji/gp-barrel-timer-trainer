@@ -1,24 +1,25 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from 'react'
+import './App.css' // Import the CSS file with outline styles
 
 function App() {
+    const [isHovered, setIsHovered] = useState(false)
+
+    const handleMouseEnter = () => {
+        setIsHovered(true)
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false)
+    }
     return (
-        <div className='App'>
-            <header className='App-header'>
-                <img src={logo} className='App-logo' alt='logo' />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className='image-container'>
+            <img
+                src='https://static.wikia.nocookie.net/leagueoflegends/images/8/82/Gangplank_Powder_Keg_screenshot.png'
+                alt=''
+                className={isHovered ? 'hovered-image' : ''}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            />
         </div>
     )
 }
