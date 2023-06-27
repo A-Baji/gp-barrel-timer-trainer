@@ -1,0 +1,15 @@
+# Ignore everything recursively
+*
+
+# But include
+!*.json
+!*.js
+!*.ts
+!*.tsx
+!*.html
+!*.less
+
+# Check subdirectories too
+!*/
+
+/docs

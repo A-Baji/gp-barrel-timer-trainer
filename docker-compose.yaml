@@ -1,0 +1,12 @@
+# TRAINER_VER=$(jq -r .version barrel-trainer/package.json) docker compose up --build
+version: "2.4"
+services:
+  barrel-trainer:
+    build: .
+    image: a-baji/barrel-trainer:${TRAINER_VER}
+    working_dir: /main
+    volumes:
+      - ./barrel-trainer:/main
+    user: node
+    ports:
+      - 3000:3000
