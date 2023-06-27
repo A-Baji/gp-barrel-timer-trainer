@@ -3,7 +3,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.prettierPath": "./node_modules/prettier",
+    "prettier.prettierPath": "~/.vscode/extensions/esbenp.prettier-vscode-9.9.0/node_modules/prettier",
     "prettier.configPath": ".prettierrc.json",
-    "prettier.ignorePath": ".prettierignore",
+    "prettier.ignorePath": ".prettierignore"
 }
