@@ -1,9 +1,29 @@
 .image-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer; /* Change the cursor to the clickable icon */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
 }
 
 .hovered-image {
-    outline: 2px solid red; /* Example outline style */
+    -webkit-filter: drop-shadow(1px 1px 0 red) drop-shadow(-1px 1px 0 red)
+        drop-shadow(1px -1px 0 red) drop-shadow(-1px -1px 0 red);
+
+    filter: drop-shadow(1px 1px 0 red) drop-shadow(-1px 1px 0 red) drop-shadow(1px -1px 0 red)
+        drop-shadow(-1px -1px 0 red);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #949494;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
 }

@@ -12,14 +12,27 @@ function App() {
         setIsHovered(false)
     }
     return (
-        <div className='image-container'>
-            <img
-                src='https://static.wikia.nocookie.net/leagueoflegends/images/8/82/Gangplank_Powder_Keg_screenshot.png'
-                alt=''
-                className={isHovered ? 'hovered-image' : ''}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            />
+        <div className='container'>
+            <div className='column'>
+                <button>Option 1</button>
+                <button>Option 2</button>
+                <button>Option 3</button>
+            </div>
+            <div className='image-container'>
+                <img
+                    src='/barrel.png'
+                    alt=''
+                    className={isHovered ? 'hovered-image' : ''}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    draggable={false}
+                />
+            </div>
+            <div className='column'>
+                <button>Option A</button>
+                <button>Option B</button>
+                <button>Option C</button>
+            </div>
         </div>
     )
 }
