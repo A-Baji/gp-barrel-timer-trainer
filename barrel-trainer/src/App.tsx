@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Checkbox, Radio, Space, Progress } from 'antd'
 import './App.css' // Import the CSS file with outline styles
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
 
 function App() {
     const [isHovered, setIsHovered] = useState(false)
@@ -30,17 +31,29 @@ function App() {
                         strokeColor='#924243'
                         status='normal'
                     />
-                    <img
-                        src='/barrel.png'
-                        alt=''
-                        className={isHovered ? 'hovered-image' : ''}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        draggable={false}
-                        style={{
-                            cursor: 'pointer'
-                        }}
-                    />
+                    <CircularProgressbarWithChildren
+                        value={75}
+                        strokeWidth={4}
+                        styles={buildStyles({
+                            rotation: 0.5,
+                            strokeLinecap: 'butt',
+                            pathColor: '#dbdbdb',
+                            trailColor: '#949494'
+                        })}
+                        counterClockwise
+                    >
+                        <img
+                            src='/barrel.png'
+                            alt=''
+                            className={isHovered ? 'hovered-image' : ''}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            draggable={false}
+                            style={{
+                                cursor: 'pointer'
+                            }}
+                        />
+                    </CircularProgressbarWithChildren>
                 </Space>
             </div>
             <div className='column' id='right'>
