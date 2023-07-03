@@ -1,5 +1,4 @@
 .image-container {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +23,12 @@
 
 .column {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin: 0 20px;
+}
+
+& .ant-progress-steps-item {
+    width: 50px !important;
 }
